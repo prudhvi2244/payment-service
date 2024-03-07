@@ -19,6 +19,10 @@ spring:
       ddl-auto: update
 
 eureka:
+  instance:
+    preferIpAddress: true
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://35.154.173.22:8761/eureka}
